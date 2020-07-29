@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function 學習1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="value1">
+    <input type="text" id="value2">
+    <button id="onButton">相加</button>
+    <div id="promote"></div>
+
+    <script>
+        function sum() {
+            var a = value1.value;
+            var b = value2.value;
+            a = Number(a) + Number(b);
+            return a;
+        };
+
+        $("#onButton").on('click',function(){
+            var sumAB = sum();
+            promote.innerText = sumAB;
+        });
+    </script>
+</body>
+</html>
