@@ -10,13 +10,32 @@
     <input type="text" id="textBox1">
     <button id="onButton">送出</button>
     <div id="report"></div>
+    <div id="report1"></div>
 
     <script>
+        // 變數使用前必須先宣告過
+        // let來設定變數會比較安全，不可重複宣告相同的變數名稱
+        // 變數宣告會有區塊性質
         $(document).ready(function (){
+            function test(){
+                let x = 100;
+                if (x > 0){
+                    let y = x;
+                    alert(y); 
+                }
+
+                for (let i = 0; i < 3; i++) {
+                    alert(i);
+                }
+            }
+            test();
+
             $("#onButton").on('click',function () {
                 var userName = textBox1.value;
+                const PI = 3.1415926 ;
 
                 report.innerText = "Hello!" + userName;
+                report1.innerText = `${PI}`;
             })
         })
     </script>
