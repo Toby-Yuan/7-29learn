@@ -20,6 +20,9 @@
     <button id="onButton2">等於字串</button>
     <div id="report3"></div>
 
+    <button id="onButton3">數字與字串切換</button>
+    <div id="report4"></div>
+
     <script>
         // 變數使用前必須先宣告過
         // let來設定變數會比較安全，不可重複宣告相同的變數名稱
@@ -83,6 +86,23 @@
 
                 report3.innerHTML += `y = ${y} <br>`;
                 report3.innerHTML += `z = ${z} <br>`;
+            })
+
+            $("#onButton3").on('click', function () {
+                var x = 12;
+                var y = "34";
+                // x.toString()轉成字串
+                z = x.toString() + y;
+                // z = x + y;
+                report4.innerHTML += `z = ${z} <br>`;
+
+                var x = 12;
+                var y = "34";
+                // Number(y)轉成數字
+                z = x - Number(y);
+                // z = x - y;
+                report4.innerHTML += `z = ${z} <br>`;
+
             })
 
         })
