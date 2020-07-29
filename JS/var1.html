@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>var學習</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
+
 <body>
     <input type="text" id="textBox1">
     <button id="onButton">送出</button>
     <div id="report"></div>
     <div id="report1"></div>
 
+    <button id="onButton1">連續等於</button>
+    <div id="report2"></div>
+
+    <button id="onButton2">等於字串</button>
+    <div id="report3"></div>
+
     <script>
         // 變數使用前必須先宣告過
         // let來設定變數會比較安全，不可重複宣告相同的變數名稱
         // 變數宣告會有區塊性質，裡面的可以讀到外面的，相反不行
         // 如果要讀裡面的，可以用retuen
-        $(document).ready(function (){
-            function test(){
+        $(document).ready(function () {
+            function test() {
                 let x = 100;
-                if (x > 0){
+                if (x > 0) {
                     let y = x;
-                    alert(y); 
+                    alert(y);
                 }
 
                 for (let i = 0; i < 3; i++) {
@@ -32,20 +40,53 @@
                 // []矩陣可以直接交換
                 var a = 100;
                 var b = 200;
-                [a,b] = [b,a];
+                [a, b] = [b, a];
                 alert(a + " " + b);
             }
             test();
 
-            $("#onButton").on('click',function () {
+            $("#onButton").on('click', function () {
                 var userName = textBox1.value;
-                const PI = 3.1415926 ;
+                const PI = 3.1415926;
 
                 report.innerText = "Hello!" + userName;
                 report1.innerText = `${PI}`;
             })
 
+            // JS可以連續等於
+            $("#onButton1").on('click', function () {
+                // ----- A 段落 -----
+                var x = 100;
+                var y = x;
+                report2.innerHTML += `y = ${y} <br>`;
+
+                // ----- B 段落 -----
+                var x = 200;
+                var y;
+                var z = y = x;
+                report2.innerHTML += `z = ${z} <br>`;
+
+                // ----- C 段落 -----
+                var x = 300;
+                var y;
+                var z = (y = x);
+                report2.innerHTML += `z = ${z} <br>`;
+
+            })
+
+            // 等於字串
+            $("#onButton2").on('click', function () {
+                var x = 100;
+                var y = x;
+                var z = "x";
+                // var z = 'x';  // 這麼寫也是字串
+
+                report3.innerHTML += `y = ${y} <br>`;
+                report3.innerHTML += `z = ${z} <br>`;
+            })
+
         })
     </script>
 </body>
+
 </html>
