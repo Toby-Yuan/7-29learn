@@ -11,22 +11,30 @@
 <body>
     <!-- .container : 會依照螢幕的寬度不同來調整寬度 -->
     <div class="container">
+
+        <!-- navber-light/dark : 針對背景亮/暗調整字體顏色, bg-(color) : 背景顏色 -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Navbar</a>
+
+            <!-- 漢堡 -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
     
+            <!-- collapse : 會被隱藏的 -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- mr : margin-right, mr-auto : 靠左 -->
                 <ul class="navbar-nav mr-auto">
+                    <!-- active : 已被選擇 -->
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
+
+                    <!-- dropdown : 下拉式選單 -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,17 +43,21 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
+                            <!-- dropdown-divider : 下拉式選單分隔線 -->
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
+
                     <li class="nav-item">
+                        <!-- disabled : 不可選擇 -->
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>
 
                 </ul>
 
                 <!-- ml : margin-left, ml-auto : 靠右 -->
+                <!-- 在Bootstrap中，預設是向右靠 -->
                 <ul class="navbar-nav ml-auto">
                     <!-- 建立第二個下拉式選單 -->
                     <li class="nav-item dropdown">
@@ -61,8 +73,11 @@
                         </div>
                     </li>
                 </ul>
+
+
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <!-- btn : 按鈕, btn-outline-(color) : 按鈕外框顏色 -->
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
