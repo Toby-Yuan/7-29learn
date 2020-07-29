@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 學習1</title>
+</head>
+<body>
+    <div id="debug">...</div>
+    <div id="debug1">...</div>
+    <div id="debug2">...</div>
+
+    <script>
+        var person = {
+            firstName : "Jimmy",
+            lastName : "Lin",
+            height : 170,
+        }
+        debug.innerText = person.firstName ;
+
+        var player = [
+            { name : "Tom" , number : 40 },
+            { name : "Jam" , number : 30 },
+            { name : "Ray" , number : 20 }
+        ]
+        var s = JSON.stringify(player);
+        debug1.innerText = s ;
+
+        var s2 = '[{"name":"Tom","number":40},{"name":"Jam","number":30},{"name":"Ray","number":20}]';
+        var player2 = JSON.parse(s2);
+        debug2.innerText = player2[0].name ;
+    </script>
+</body>
+</html>
