@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 學習1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text" id="textBox1" value="50">
+        <button id="okButton">送出</button>
+        <div id="report"></div>
+
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var answer = Math.floor(Math.random() * 100);
+
+            $("#okButton").on('click', function () {
+                var userKeyin = textBox1.value;
+                var prompt = "";
+
+                if (userKeyin > answer) {
+                    prompt = "Lower";
+                } else if (userKeyin < answer){
+                    prompt = "Higher";
+                } else {
+                    prompt = "Great!!"
+                }
+
+
+
+                report.innerHTML += prompt + "<br>";
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>
