@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var學習</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="textBox1">
+    <button id="onButton">送出</button>
+    <div id="report"></div>
+
+    <script>
+        $(document).ready(function (){
+            $("#onButton").on('click',function () {
+                var userName = textBox1.value;
+
+                report.innerText = "Hello!" + userName;
+            })
+        })
+    </script>
+</body>
+</html>
