@@ -42,7 +42,7 @@
     </style>
 </head>
 <body>
-    <img src="image/clickme.png">
+    <img src="image/clickme.png" onclick="doAnimateShow()">
 
 	<div class="box" id="box">
 		<a class="boxclose" id="boxclose"></a>
@@ -52,9 +52,9 @@
 	</div>
 
 	<script>
-	
-	
-		
+		function doAnimateShow(){
+            document.getElementById("box").style.top = "200px";
+        }
 	</script>
 </body>
 </html>
