@@ -19,7 +19,7 @@
             border-radius: 20px;
             box-shadow: 0 1px 5px #333;
             z-index: 101;
-            transition: top 3s ease-out;
+            transition: all 3s ease-out;
         }
 
         .box h1{
@@ -54,7 +54,8 @@
 
 	<script>
 		function doAnimateShow(){
-            document.getElementById("box").style.top = "200px";
+            document.getElementById("box").style.left = event.clientX + "px";
+            document.getElementById("box").style.top = event.clientY + "px";
         }
 
         function doAnimateHdie(){
