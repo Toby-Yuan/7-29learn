@@ -59,12 +59,15 @@
 
         function doAnimateHdie(){
             document.getElementById("box").style.top = "-200px";
+            // 獨立出觸發點
+            event.cancelBubble = true;
         }
 
         // 這裡doAnimateHide後面不用加入()
         // 加上()會需要有return值
         document.getElementById("boxclose").onclick = doAnimateHdie;
 
+        // 會使hide觸發點無效
         document.onclick = doAnimateShow;
 	</script>
 </body>
